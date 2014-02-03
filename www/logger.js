@@ -27,8 +27,8 @@
 // WARN                         - constant for the level WARN
 // INFO                         - constant for the level INFO
 // DEBUG                        - constant for the level DEBUG
-// logLevel()                   - returns current log level
-// logLevel(value)              - sets and returns a new log level
+// level()                      - returns current log level
+// level(value)                 - sets and returns a new log level
 // useConsole()                 - returns whether logger is using console
 // useConsole(value)            - sets and returns whether logger is using console
 // log(message,...)             - logs a message at level LOG
