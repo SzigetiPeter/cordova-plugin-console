@@ -11,6 +11,26 @@
     <repo>https://git-wip-us.apache.org/repos/asf/cordova-plugin-console.git</repo>
     <issue>https://issues.apache.org/jira/browse/CB/component/12320644</issue>
 
+    <!-- android -->
+    <platform name="android">
+		<config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Console">
+                <param name="android-package" value="org.apache.cordova.console.Console"/>
+            </feature>
+        </config-file>
+
+		<js-module src="www/console-via-logger.js" name="console">
+            <clobbers target="console" />
+        </js-module>
+
+        <js-module src="www/logger.js" name="logger">
+            <clobbers target="cordova.logger" />
+        </js-module>
+
+        <source-file src="src/android/Console.java" target-dir="src/org/apache/cordova/console" />
+
+    </platform>
+
     <!-- ios -->
     <platform name="ios">
 
